@@ -59,4 +59,7 @@ def _extract_tags(html):
     '''
     import re
     keep = re.findall(r'<[^>]+>', html)
+    for i in keep:
+        if i[1] == 'href':
+            return []
     return keep
